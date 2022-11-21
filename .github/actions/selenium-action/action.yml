@@ -1,0 +1,9 @@
+name: Run Funtional Test
+description: Runs the selenium automated test cases
+
+runs: 
+  using: composite
+  steps:
+    - name: Run Functional Workflow
+      shell: bash
+      run: mvn -B package -f employee-details-selenium/pom.xml test
